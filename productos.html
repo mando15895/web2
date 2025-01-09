@@ -3,99 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Venezuela</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Nunito', sans-serif; }
-    .hero-bg { background-image: url('https://source.unsplash.com/1600x900/?venezuelan-food'); background-size: cover; background-position: center; }
-    .filter-item { transition: all 0.3s ease; cursor: pointer; }
-    .filter-item:hover { background-color: #edf2f7; }
-  </style>
+  <title>Productos - MS COLLECTOR</title>
+  <link rel="stylesheet" href="css/styles2.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-  <!-- Navbar -->
-  <nav class="bg-teal-800 text-white p-6">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold">My Venezuela</a>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:underline">Inicio</a></li>
-        <li><a href="productos.html" class="hover:underline">Galería</a></li>
-        <li><a href="presupuesto.html" class="hover:underline">Presupuesto</a></li>
-        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-      </ul>
-      <div class="relative">
-        <input type="text" placeholder="Search product" class="p-2 rounded-full text-black">
-        <button class="absolute right-2 top-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 19l-3.5-3.5m2.5-6.5A6.5 6.5 0 1112 2a6.5 6.5 0 016.5 6.5z" />
-          </svg>
-        </button>
-      </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">MS COLLECTOR</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="presupuesto.html">Presupuesto</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
-  </nav> 
+  </header>
 
-  <main class="container mx-auto my-12">
-    <h1 class="text-4xl text-center font-bold mb-8">Galería de Productos</h1>
-    <div class="grid grid-cols-3 gap-8">
-      <!-- Producto 1 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/pabelloncriollo.jpg" class="w-full h-40 object-cover mb-4" alt="Pabellón Criollo">
-        <h3 class="text-xl font-semibold mb-2">Pabellón Criollo</h3>
-        <p class="text-gray-600 mb-4">€13</p>
+  <!-- Main Content -->
+  <main class="container">
+    <section class="productos-section">
+      <h1>Nuestros Productos</h1>
+      <div class="search-bar">
+        <input id="searchField" type="text" placeholder="Buscar producto" class="search-input">
+        <button id="searchButton" class="search-button">Buscar</button>
       </div>
-
-      <!-- Producto 2 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/tresleche.jpg" class="w-full h-40 object-cover mb-4" alt="Tres Leches">
-        <h3 class="text-xl font-semibold mb-2">Tres Leches</h3>
-        <p class="text-gray-600 mb-4">€5</p>
+      <div id="productList" class="product-grid">
+        <div class="product">
+          <img src="imagenes/sealedkit.jpg" alt="Sealed Kit">
+          <h3>Sealed Kit</h3>
+          <p>€25</p>
+        </div>
+        <div class="product">
+          <img src="imagenes/boosterpackcrown.jpg" alt="Booster Pack Crown">
+          <h3>Booster Pack Crown</h3>
+          <p>€5</p>
+        </div>
+        <div class="product">
+          <img src="imagenes/MercurialHeart.jpg" alt="Booster box Mercurial Heart">
+          <h3>Booster box Mercurial Heart</h3>
+          <p>€80</p>
+        </div>
+        <div class="product">
+          <img src="imagenes/TonorisStarter.webp" alt="Tonoris Starter">
+          <h3>Tonoris Starter</h3>
+          <p>€15</p>
+        </div>
+        <div class="product">
+          <img src="imagenes/fundasmerlin.jpg" alt="Fundas Merlin">
+          <h3>Fundas Merlin</h3>
+          <p>€12</p>
+        </div>
+        <div class="product">
+          <img src="imagenes/mortalambition.png" alt="Booster Mortal Ambition">
+          <h3>Mortal Ambition</h3>
+          <p>€90</p>
+        </div>
+        <div class="product">
+          <img src="imagenes/starteralchemical.png" alt="Starter Alchemical">
+          <h3>Starter Alchemical</h3>
+          <p>€35</p>
+        </div>
       </div>
-
-      <!-- Producto 3 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/frescolita.jpg" class="w-full h-40 object-cover mb-4" alt="Frescolita">
-        <h3 class="text-xl font-semibold mb-2">Frescolita</h3>
-        <p class="text-gray-600 mb-4">€3</p>
-      </div>
-
-      <!-- Producto 4 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/arepas.jpg" class="w-full h-40 object-cover mb-4" alt="Arepas">
-        <h3 class="text-xl font-semibold mb-2">Arepas</h3>
-        <p class="text-gray-600 mb-4">€10</p>
-      </div>
-
-      <!-- Producto 5 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/cachapa.jpg" class="w-full h-40 object-cover mb-4" alt="Cachapa">
-        <h3 class="text-xl font-semibold mb-2">Cachapa</h3>
-        <p class="text-gray-600 mb-4">€12</p>
-      </div>
-
-      <!-- Producto 6 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/asadonegro.jpg" class="w-full h-40 object-cover mb-4" alt="Asado Negro">
-        <h3 class="text-xl font-semibold mb-2">Asado Negro</h3>
-        <p class="text-gray-600 mb-4">€14</p>
-      </div>
-
-      <!-- Producto 7 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/arrozconleche.png" class="w-full h-40 object-cover mb-4" alt="Arroz con Leche">
-        <h3 class="text-xl font-semibold mb-2">Arroz con Leche</h3>
-        <p class="text-gray-600 mb-4">€4</p>
-      </div>
-
-      <!-- Producto 8 -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <img src="imagenes/cocada.jpg" class="w-full h-40 object-cover mb-4" alt="Cocada">
-        <h3 class="text-xl font-semibold mb-2">Cocada</h3>
-        <p class="text-gray-600 mb-4">€4</p>
-      </div>
-    </div>
+      <p id="noResults" class="hidden">No se encontraron productos.</p>
+    </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 MS COLLECTOR. Todos los derechos reservados.</p>
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">
+          <img src="imagenes/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="imagenes/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="imagenes/x.png" alt="Twitter">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Js/javascrip.txt2.js"></script>
 </body>
 </html>
